@@ -1,0 +1,372 @@
+{
+  "store.home": { 
+    "blocks": [
+      "tab-layout#home" 
+    ]
+  },
+  "tab-layout#home": {
+    "children": [
+      "sticky-layout#header",
+      "slider-layout#highlights",
+      "tab-content#home1"
+    ]
+  },
+  "sticky-layout#header": {
+    "props": { 
+      "position": "botton",
+      "blockClass": "sticky-header"
+    },
+    "children":[
+      "flex-layout.row#header",
+      "tab-list#home"
+      
+     ]
+  },
+  "flex-layout.row#header": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer",
+      "search-bar",
+      "flex-layout.col#spacer",
+      "minicart.v2"
+    ]
+  },
+  "search-bar": {
+    "props": {
+      "placeholder": "BUSCAR",
+      "compactMode": false
+      
+    }
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["logo"]
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
+      "width": "150px"
+    }
+  },
+  "slider-layout#highlights": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "fullWidth": false,
+      "infinite": true,
+      "showNavigationArrows": "always",
+      "blockClass": "carousel"
+    },
+    "children": ["image#1", "image#2"]
+  },
+  "image#1": {
+    "props": {
+      "src": "assets/BANNER-WOOD.png"
+    }
+  },
+  "image#2": {
+    "props": {
+      "src": "assets/BANNER-GUERREIROS.png"
+    }
+  },
+  "tab-list#home": {
+    "children": [
+      "tab-list.item#home1",
+      "tab-list.item#home2",
+      "tab-list.item#home3",
+      "tab-list.item#home4",
+      "tab-list.item#home5",
+      "tab-list.item#home6",
+      "tab-list.item#home7",
+      "tab-list.item#home8",
+      "tab-list.item#home9",
+      "tab-list.item#home10"
+    ]
+  },
+  "tab-list.item#home1": {
+    "props": {
+      "tabId": "promocao",
+      "label": "PROMOÇÃO"
+    }
+  },
+  "tab-list.item#home2": {
+    "props": {
+      "tabId": "corinthians",
+      "label": "CORINTHIANS"
+    }
+  },
+  "tab-list.item#home3": {
+    "props": {
+      "tabId": "palmeiras",
+      "label": "PALMEIRAS"
+    }
+  },
+  "tab-list.item#home4": {
+    "props": {
+      "tabId": "signos",
+      "label": "SIGNOS"
+    }
+  },
+  "tab-list.item#home5": {
+    "props": {
+      "tabId": "divertidos",
+      "label": "DIVERTIDOS"
+    }
+  },
+  "tab-list.item#home6": {
+    "props": {
+      "tabId": "7 maravilhas",
+      "label": "7 MARAVILHAS"
+    }
+  },
+  "tab-list.item#home7": {
+    "props": {
+      "tabId": "guerreiros",
+      "label": "GUERREIROS"
+    }
+  },
+  "tab-list.item#home8": {
+    "props": {
+      "tabId": "album1",
+      "label": "ALBUM 1"
+    }
+  },
+  "tab-list.item#home9": {
+    "props": {
+      "tabId": "album2",
+      "label": "ALBUM 2"
+    }
+  },
+  "tab-list.item#home10": {
+    "props": {
+      "tabId": "album3",
+      "label": "ALBUM 3"
+    }
+  },
+  "tab-content#home1": {
+       "children": [
+         "tab-content.item#home1",
+         "tab-content.item#home2",
+         "tab-content.item#home3",
+         "tab-content.item#home4",
+         "tab-content.item#home5",
+         "tab-content.item#home6",
+         "tab-content.item#home7",
+         "tab-content.item#home8",
+         "tab-content.item#home9",
+         "tab-content.item#home10"
+       ]
+  },
+  "tab-content.item#home1": {
+    "children": ["search-result-layout.customQuery#1"], 
+    "props": { "tabId": "promocao"}
+  },
+  
+  "search-result-layout.customQuery#1": {
+    "props": {
+        "querySchema": {
+            "orderByField": "OrderByReleaseDateDESC",
+            "hideUnavailableItems": true,
+            "maxItemsPerPage": 8,
+            "queryField": "promocao",
+            "mapField": "ft",
+            "skusFilter": "ALL_AVAILABLE"
+        }
+    },
+      "blocks": [
+        "search-result-layout.desktop"
+      ]
+ },
+ "tab-content.item#home2": {
+  "children": ["search-result-layout.customQuery#2"], 
+  "props": { "tabId": "corinthians"}
+},
+
+"search-result-layout.customQuery#2": {
+  "props": {
+      "querySchema": {
+          "orderByField": "OrderByReleaseDateDESC",
+          "hideUnavailableItems": true,
+          "maxItemsPerPage": 8,
+          "queryField": "corinthians",
+          "mapField": "ft",
+          "skusFilter": "ALL_AVAILABLE",
+          "blockClass": "sr"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop"
+    ]
+  },
+  "tab-content.item#home3": {
+    "children": ["search-result-layout.customQuery#3"], 
+    "props": { "tabId": "palmeiras"}
+  },
+  "search-result-layout.customQuery#3": {
+    "props": {
+        "querySchema": {
+            "orderByField": "OrderByReleaseDateDESC",
+            "hideUnavailableItems": true,
+            "maxItemsPerPage": 8,
+            "queryField": "palmeiras",
+            "mapField": "ft",
+            "skusFilter": "ALL_AVAILABLE"
+        }
+    },
+      "blocks": [
+        "search-result-layout.desktop"
+      ]
+ },
+ "tab-content.item#home4": {
+  "children": ["search-result-layout.customQuery#4"], 
+  "props": { "tabId": "signos"}
+},
+ "search-result-layout.customQuery#4": {
+  "props": {
+      "querySchema": {
+          "orderByField": "OrderByReleaseDateDESC",
+          "hideUnavailableItems": true,
+          "maxItemsPerPage": 8,
+          "queryField": "Signos",
+          "mapField": "ft",
+          "skusFilter": "ALL_AVAILABLE"
+      }
+  },
+    "blocks": [
+      "search-result-layout.desktop"
+    ]
+  },
+  "tab-content.item#home5": {
+    "children": ["search-result-layout.customQuery#5"], 
+    "props": { "tabId": "divertidos"}
+  },
+   "search-result-layout.customQuery#5": {
+    "props": {
+        "querySchema": {
+            "orderByField": "OrderByReleaseDateDESC",
+            "hideUnavailableItems": true,
+            "maxItemsPerPage": 8,
+            "queryField": "Divertidos",
+            "mapField": "ft",
+            "skusFilter": "ALL_AVAILABLE"
+        }
+    },
+      "blocks": [
+        "search-result-layout.desktop"
+      ]
+    },
+    "tab-content.item#home6": {
+      "children": ["search-result-layout.customQuery#6"], 
+      "props": { "tabId": "7 maravilhas"}
+    },
+     "search-result-layout.customQuery#6": {
+      "props": {
+          "querySchema": {
+              "orderByField": "OrderByReleaseDateDESC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "queryField": "7 maravilhas",
+              "mapField": "ft",
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+        "blocks": [
+          "search-result-layout.desktop"
+        ]
+      },
+      "tab-content.item#home7": {
+        "children": ["search-result-layout.customQuery#6"], 
+        "props": { "tabId": "guerreiros"}
+      },
+       "search-result-layout.customQuery#7": {
+        "props": {
+            "querySchema": {
+                "orderByField": "OrderByReleaseDateDESC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "queryField": "Guerreiros",
+                "mapField": "ft",
+                "skusFilter": "ALL_AVAILABLE"
+            }
+        },
+          "blocks": [
+            "search-result-layout.desktop"
+          ]
+        },
+        "tab-content.item#home8": {
+          "children": ["search-result-layout.customQuery#6"], 
+          "props": { "tabId": "album1"}
+        },
+         "search-result-layout.customQuery#8": {
+          "props": {
+              "querySchema": {
+                  "orderByField": "OrderByReleaseDateDESC",
+                  "hideUnavailableItems": true,
+                  "maxItemsPerPage": 8,
+                  "queryField": "album 1",
+                  "mapField": "ft",
+                  "skusFilter": "ALL_AVAILABLE"
+              }
+          },
+            "blocks": [
+              "search-result-layout.desktop"
+            ]
+          },
+          "tab-content.item#home9": {
+            "children": ["search-result-layout.customQuery#6"], 
+            "props": { "tabId": "album2"}
+          },
+           "search-result-layout.customQuery#9": {
+            "props": {
+                "querySchema": {
+                    "orderByField": "OrderByReleaseDateDESC",
+                    "hideUnavailableItems": true,
+                    "maxItemsPerPage": 8,
+                    "queryField": "album 2",
+                    "mapField": "ft",
+                    "skusFilter": "ALL_AVAILABLE"
+                }
+            },
+              "blocks": [
+                "search-result-layout.desktop"
+              ]
+            },
+            "tab-content.item#home10": {
+              "children": ["search-result-layout.customQuery#6"], 
+              "props": { "tabId": "album3"}
+            },
+             "search-result-layout.customQuery#10": {
+              "props": {
+                  "querySchema": {
+                      "orderByField": "OrderByReleaseDateDESC",
+                      "hideUnavailableItems": true,
+                      "maxItemsPerPage": 8,
+                      "queryField": "album 3",
+                      "mapField": "ft",
+                      "skusFilter": "ALL_AVAILABLE"
+                  }
+              },
+                "blocks": [
+                  "search-result-layout.desktop"
+                ]
+              }
+}

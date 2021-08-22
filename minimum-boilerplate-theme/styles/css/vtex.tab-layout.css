@@ -1,0 +1,21 @@
+.container {
+    background-color: #303030;
+}
+
+.sliderLayoutContainer {
+    background-color: #303030;
+}
+
+.listItem {
+   color: white
+    
+   
+}
+.sliderLayoutContainer--carousel {
+    background: #303030;
+  }
+
+.listItemActive{
+    background: #59ff00 !important;
+      
+  }

@@ -1,0 +1,14 @@
+.searchBarContainer {
+    width: 850px;
+    background-color: #212121;
+}
+.searchIcon {
+    color: #212121;
+    
+}
+.searchBarIcon--search {
+    background-color:#212121 ;
+}
+.imageElement {
+    border: radius 5px;;
+}
